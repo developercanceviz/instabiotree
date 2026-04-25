@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Canceviz Hurma - Link in Bio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Jost:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface": "#1f0f07",
+                        "on-primary-container": "#3b2500",
+                        "error-container": "#93000a",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#443026",
+                        "tertiary-container": "#949088",
+                        "on-tertiary-container": "#2c2a23",
+                        "on-secondary-fixed-variant": "#613e2f",
+                        "on-secondary-container": "#dbab96",
+                        "tertiary-fixed": "#e7e2d8",
+                        "background": "#1f0f07",
+                        "surface-container-lowest": "#190a04",
+                        "surface-dim": "#1f0f07",
+                        "on-secondary": "#48291a",
+                        "on-primary": "#442b00",
+                        "on-tertiary-fixed-variant": "#494740",
+                        "on-error": "#690005",
+                        "inverse-on-surface": "#402c21",
+                        "inverse-primary": "#805609",
+                        "secondary": "#eebca7",
+                        "surface-container": "#2d1b12",
+                        "on-background": "#fddccc",
+                        "surface-container-high": "#39261c",
+                        "on-tertiary": "#32302a",
+                        "on-surface-variant": "#d4c4b3",
+                        "on-tertiary-fixed": "#1d1b16",
+                        "on-secondary-fixed": "#2f1408",
+                        "inverse-surface": "#fddccc",
+                        "surface-container-low": "#29170e",
+                        "surface-tint": "#f5bd6a",
+                        "on-primary-fixed-variant": "#624000",
+                        "secondary-fixed-dim": "#eebca7",
+                        "on-surface": "#fddccc",
+                        "tertiary": "#cbc6bd",
+                        "secondary-fixed": "#ffdbcd",
+                        "outline-variant": "#504538",
+                        "outline": "#9c8f7f",
+                        "surface-container-highest": "#443026",
+                        "primary-container": "#b9883b",
+                        "primary-fixed-dim": "#f5bd6a",
+                        "on-primary-fixed": "#291800",
+                        "primary": "#f5bd6a",
+                        "surface-bright": "#49352a",
+                        "tertiary-fixed-dim": "#cbc6bd",
+                        "secondary-container": "#613e2f",
+                        "primary-fixed": "#ffddb1",
+                        "mahogany": "#2C1206"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "section-gap": "80px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-page": "32px",
+                        "container-max": "1200px"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Jost", "sans-serif"],
+                        "headline-md": ["Cormorant Garamond", "serif"],
+                        "body-md": ["Jost", "sans-serif"],
+                        "headline-xl": ["Cormorant Garamond", "serif"],
+                        "headline-lg": ["Cormorant Garamond", "serif"],
+                        "label-sm": ["Jost", "sans-serif"]
+                    },
+                    fontSize: {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "label-sm": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #2C1206;
+            background-image: radial-gradient(circle at 50% 10%, rgba(184, 135, 58, 0.15) 0%, rgba(44, 18, 6, 0) 50%), url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23f5bd6a" fill-opacity="0.03" fill-rule="evenodd"%3E%3Ccircle cx="3" cy="3" r="3"/%3E%3Ccircle cx="13" cy="13" r="3"/%3E%3C/g%3E%3C/svg%3E');
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(245, 189, 106, 0.3);
+        }
+        .glass-card:hover, .glass-card:active {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(245, 189, 106, 0.6);
+            box-shadow: 0 0 15px rgba(245, 189, 106, 0.1);
+        }
+        .ornamental-divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: rgba(245, 189, 106, 0.3);
+            margin: 2rem 0;
+        }
+        .ornamental-divider::before, .ornamental-divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid rgba(245, 189, 106, 0.3);
+        }
+        .ornamental-divider::before {
+            margin-right: .5em;
+        }
+        .ornamental-divider::after {
+            margin-left: .5em;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface antialiased min-h-screen flex justify-center pb-12">
+<!-- Main Container -->
+<main class="w-full max-w-[420px] px-6 pt-12 flex flex-col relative">
+<!-- TopAppBar Navigation Elements Suppressed as per logic for a transactional/link tree splash screen -->
+<!-- 1. Profile Header -->
+<header class="flex flex-col items-center mb-8 relative">
+<div class="relative w-20 h-20 mb-4">
+<div class="absolute inset-0 rounded-full bg-primary/20 blur-md scale-110"></div>
+<img alt="Canceviz Hurma Premium Dates Logo" class="w-full h-full rounded-full object-cover border-2 border-primary/50 relative z-10 shadow-lg shadow-black/50" data-alt="Close up of a premium, plump, dark mahogany date resting on a minimalist gold surface, soft dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBv-bKuGyrT5YBMIGo4qZMit4KYWb3oCdjyMgDReBiMH3gFoU4cEcLd1jRwq5IS1j-QDWbN_LS89wzxHTpWhd7pV4dCSlcTv_xOk3EQfp2TSBZmW4JeANW7a9qpv8JP8576BNnJAzYBFHis6U1JIdyH2EkyBlhi_Ot2sBvuUGqYAlyHoZkXwkrmZ50s4dcq2kBXmCf_gYXB6MGOdz8i1ln9zXXnOeqXIumL369YnNdEqwfo9fTD27uAGDG0-lzstw_FCPIgQmreeM"/>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface mb-1 text-center">Canceviz Hurma</h1>
+<p class="font-label-sm text-label-sm text-primary/80 mb-4 text-center">Doğanın En Tatlı Hediyesi 🌿</p>
+<!-- Social Icons -->
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-primary hover:text-primary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="photo_camera" style="font-variation-settings: 'FILL' 1;">photo_camera</span>
+</a>
+<a class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-primary hover:text-primary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="chat" style="font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+<a class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-primary hover:text-primary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</a>
+</div>
+</header>
+<!-- 2. Trust Bar -->
+<div class="flex justify-center mb-8">
+<div class="glass-card rounded-full px-4 py-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-[11px] text-primary/90 tracking-wider">100.000+ Mutlu Müşteri · Ücretsiz Kargo</span>
+</div>
+</div>
+<div class="ornamental-divider">
+<div class="w-2 h-2 rotate-45 border border-primary/30"></div>
+</div>
+<!-- 3. Alışveriş Section -->
+<section class="flex flex-col gap-3 mb-4">
+<h2 class="font-label-sm text-[12px] text-primary uppercase tracking-[0.2em] mb-2 text-center">🛍 ALIŞVERİŞ</h2>
+<a class="glass-card rounded-xl h-14 flex items-center px-4 w-full group transition-all duration-300" href="#">
+<div class="w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center bg-primary/5 text-sm mr-4">🌴</div>
+<span class="font-body-md text-body-md text-on-surface flex-1">Medine Hurmaları</span>
+<span class="material-symbols-outlined text-primary/50 group-hover:text-primary transition-colors" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</a>
+<a class="glass-card rounded-xl h-14 flex items-center px-4 w-full group transition-all duration-300" href="#">
+<div class="w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center bg-primary/5 text-sm mr-4">🍫</div>
+<span class="font-body-md text-body-md text-on-surface flex-1">Çikolatalı Hurmalar</span>
+<span class="material-symbols-outlined text-primary/50 group-hover:text-primary transition-colors" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</a>
+<a class="glass-card rounded-xl h-14 flex items-center px-4 w-full group transition-all duration-300" href="#">
+<div class="w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center bg-primary/5 text-sm mr-4">☕</div>
+<span class="font-body-md text-body-md text-on-surface flex-1">Kahveler</span>
+<span class="material-symbols-outlined text-primary/50 group-hover:text-primary transition-colors" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</a>
+<a class="glass-card rounded-xl h-14 flex items-center px-4 w-full group transition-all duration-300" href="#">
+<div class="w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center bg-primary/5 text-sm mr-4">🌰</div>
+<span class="font-body-md text-body-md text-on-surface flex-1">Kuruyemiş</span>
+<span class="material-symbols-outlined text-primary/50 group-hover:text-primary transition-colors" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</a>
+<a class="glass-card rounded-xl h-14 flex items-center px-4 w-full group transition-all duration-300" href="#">
+<div class="w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center bg-primary/5 text-sm mr-4">🍯</div>
+<span class="font-body-md text-body-md text-on-surface flex-1">Yöresel Ürünler</span>
+<span class="material-symbols-outlined text-primary/50 group-hover:text-primary transition-colors" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</a>
+<a class="glass-card rounded-xl h-14 flex items-center px-4 w-full group transition-all duration-300 bg-primary/5" href="#">
+<div class="w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center bg-primary/10 text-sm mr-4">✨</div>
+<span class="font-body-md text-body-md text-primary font-medium flex-1">Fırsat Ürünleri</span>
+<span class="material-symbols-outlined text-primary/70 group-hover:text-primary transition-colors" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</a>
+</section>
+<div class="ornamental-divider">
+<div class="w-2 h-2 rotate-45 border border-primary/30 bg-primary/10"></div>
+</div>
+<!-- 4. Sipariş & Destek Section -->
+<section class="flex flex-col gap-3 mb-4">
+<h2 class="font-label-sm text-[12px] text-primary uppercase tracking-[0.2em] mb-2 text-center">📦 SİPARİŞ &amp; DESTEK</h2>
+<a class="glass-card rounded-xl h-14 flex items-center px-4 w-full group transition-all duration-300" href="#">
+<div class="w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center bg-primary/5 text-sm mr-4">
+<span class="material-symbols-outlined text-[16px] text-primary/80" data-icon="local_shipping">local_shipping</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface flex-1">Sipariş Takip</span>
+<span class="material-symbols-outlined text-primary/50 group-hover:text-primary transition-colors" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</a>
+<a class="glass-card rounded-xl h-14 flex items-center px-4 w-full group transition-all duration-300" href="#">
+<div class="w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center bg-primary/5 text-sm mr-4">
+<span class="material-symbols-outlined text-[16px] text-primary/80" data-icon="support_agent">support_agent</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface flex-1">WhatsApp Destek</span>
+<span class="material-symbols-outlined text-primary/50 group-hover:text-primary transition-colors" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</a>
+</section>
+<div class="ornamental-divider">
+<div class="w-2 h-2 rotate-45 border border-primary/30"></div>
+</div>
+<!-- 5. İş Birliği Section -->
+<section class="flex flex-col gap-3 mb-4">
+<h2 class="font-label-sm text-[12px] text-primary uppercase tracking-[0.2em] mb-2 text-center">🤝 İŞ BİRLİĞİ</h2>
+<a class="glass-card rounded-xl h-14 flex items-center px-4 w-full group transition-all duration-300 border-primary/60 bg-primary/5 hover:bg-primary/10" href="#">
+<div class="w-8 h-8 rounded-full border border-primary/60 flex items-center justify-center bg-primary/10 text-sm mr-4">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="handshake">handshake</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface flex-1">İçerik Üretici Başvurusu</span>
+<span class="material-symbols-outlined text-primary/70 group-hover:text-primary transition-colors" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</a>
+</section>
+<div class="ornamental-divider">
+<div class="w-2 h-2 rotate-45 border border-primary/30"></div>
+</div>
+<!-- 6. Kurumsal Section -->
+<section class="flex flex-col gap-3 mb-12">
+<h2 class="font-label-sm text-[12px] text-primary uppercase tracking-[0.2em] mb-2 text-center">🏢 KURUMSAL</h2>
+<a class="glass-card rounded-xl h-14 flex items-center px-4 w-full group transition-all duration-300" href="#">
+<div class="w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center bg-primary/5 text-sm mr-4">
+<span class="material-symbols-outlined text-[16px] text-primary/80" data-icon="storefront">storefront</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface flex-1">Toptan Satış</span>
+<span class="material-symbols-outlined text-primary/50 group-hover:text-primary transition-colors" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</a>
+</section>
+<!-- 7. Footer -->
+<footer class="mt-auto flex flex-col items-center gap-2 opacity-60">
+<p class="font-label-sm text-[10px] text-primary/80 tracking-widest uppercase">© Canceviz Hurma</p>
+<a class="font-label-sm text-[10px] text-primary/60 hover:text-primary tracking-widest transition-colors" href="#">cancevizhurma.com</a>
+</footer>
+</main>
+</body></html>
