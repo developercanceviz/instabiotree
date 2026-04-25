@@ -8,6 +8,7 @@ const SHOPPING_LINKS: { emoji: string; label: string; href: string; highlight?: 
   { emoji: '📍', label: 'Konum / Mağaza', href: 'https://share.google/F5ezbaofD7Pm4tnOZ' },
   { emoji: '📦', label: 'Toptan Satış', href: 'https://cancevizhurma.com/pages/iletisim' },
   { emoji: '🛒', label: 'Tüm Ürünler', href: 'https://cancevizhurma.com/' },
+  { emoji: '✨', label: 'Fırsat Ürünleri', href: 'https://cancevizhurma.com/acilisa-ozel', highlight: true },
 ];
 
 const SUPPORT_LINKS = [
@@ -165,7 +166,7 @@ export default function BioPage() {
             fontSize: 14, fontWeight: 600, letterSpacing: '0.05em',
             color: 'rgba(245,189,106,0.8)', marginBottom: 12, textAlign: 'center',
           }}>
-            Doğanın En Tatlı Hediyesi 🌿
+            Doğanın En Tatlı Hediyesi 🌴
           </p>
 
           {/* Social Icons */}
@@ -226,8 +227,6 @@ export default function BioPage() {
             </span>
           </div>
         </div>
-
-        <Divider />
 
         {/* ALIŞVERİŞ */}
         <section style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 16 }}>
