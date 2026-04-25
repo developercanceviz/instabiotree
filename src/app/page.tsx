@@ -223,7 +223,7 @@ export default function BioPage() {
               fontSize: 11, fontWeight: 600, letterSpacing: '0.05em',
               color: 'rgba(245,189,106,0.9)',
             }}>
-              100.000+ Mutlu Müşteri · Ücretsiz Kargo
+              200.000+ Mutlu Müşteri · Ücretsiz Kargo
             </span>
           </div>
         </div>
