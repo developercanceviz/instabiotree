@@ -2,22 +2,17 @@
 
 import Image from 'next/image';
 
-const SHOPPING_LINKS = [
-  { emoji: '🌴', label: 'Medine Hurmaları', href: 'https://cancevizhurma.com/medine-hurmalari' },
-  { emoji: '🍫', label: 'Çikolatalı Hurmalar', href: 'https://cancevizhurma.com/cikolatali-hurma' },
-  { emoji: '☕', label: 'Kahveler', href: 'https://cancevizhurma.com/kahveler' },
-  { emoji: '🌰', label: 'Kuruyemiş', href: 'https://cancevizhurma.com/kuruyemis' },
-  { emoji: '🍯', label: 'Yöresel Ürünler', href: 'https://cancevizhurma.com/yoresel-urunler' },
-  { emoji: '✨', label: 'Fırsat Ürünleri', href: 'https://cancevizhurma.com/acilisa-ozel', highlight: true },
+const SHOPPING_LINKS: { emoji: string; label: string; href: string; highlight?: boolean }[] = [
+  { emoji: '🔥', label: 'Haftanın Kampanyası', href: 'https://cancevizhurma.com/cennet-hurmasi-kampanyasi-2li-paket' },
+  { emoji: '⭐', label: 'Çok Satanlar', href: 'https://cancevizhurma.com/acilisa-ozel' },
+  { emoji: '📍', label: 'Konum / Mağaza', href: 'https://share.google/F5ezbaofD7Pm4tnOZ' },
+  { emoji: '📦', label: 'Toptan Satış', href: 'https://cancevizhurma.com/pages/iletisim' },
+  { emoji: '🛒', label: 'Tüm Ürünler', href: 'https://cancevizhurma.com/' },
 ];
 
 const SUPPORT_LINKS = [
   { icon: 'local_shipping', label: 'Sipariş Takip', href: 'https://cancevizhurma.com/pages/siparis-takip' },
   { icon: 'support_agent', label: 'WhatsApp Destek', href: 'https://wa.me/905535229895' },
-];
-
-const KURUMSAL_LINKS = [
-  { icon: 'storefront', label: 'Toptan Satış', href: 'https://cancevizhurma.com/pages/iletisim' },
 ];
 
 function ArrowIcon() {
@@ -129,18 +124,18 @@ export default function BioPage() {
       backgroundColor: '#2C1206',
       backgroundImage: `radial-gradient(circle at 50% 10%, rgba(184,135,58,0.15) 0%, rgba(44,18,6,0) 50%), url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f5bd6a' fill-opacity='0.03' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E")`,
       display: 'flex', justifyContent: 'center',
-      paddingBottom: 48,
+      paddingBottom: 32,
     }}>
       <main style={{
         width: '100%', maxWidth: 420,
-        padding: '48px 24px 0',
+        padding: '24px 24px 0',
         display: 'flex', flexDirection: 'column',
         position: 'relative',
       }}>
 
         {/* Profile Header */}
-        <header style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: 32 }}>
-          <div style={{ position: 'relative', width: 80, height: 80, marginBottom: 16 }}>
+        <header style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: 16 }}>
+          <div style={{ position: 'relative', width: 80, height: 80, marginBottom: 12 }}>
             <div style={{
               position: 'absolute', inset: 0, borderRadius: '50%',
               background: 'rgba(245,189,106,0.2)',
@@ -168,7 +163,7 @@ export default function BioPage() {
           <p style={{
             fontFamily: 'var(--font-jost), sans-serif',
             fontSize: 14, fontWeight: 600, letterSpacing: '0.05em',
-            color: 'rgba(245,189,106,0.8)', marginBottom: 16, textAlign: 'center',
+            color: 'rgba(245,189,106,0.8)', marginBottom: 12, textAlign: 'center',
           }}>
             Doğanın En Tatlı Hediyesi 🌿
           </p>
@@ -213,7 +208,7 @@ export default function BioPage() {
         </header>
 
         {/* Trust Bar */}
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 32 }}>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 16 }}>
           <div style={{
             background: 'rgba(255,255,255,0.03)',
             border: '1px solid rgba(245,189,106,0.3)',
@@ -273,7 +268,7 @@ export default function BioPage() {
         <Divider />
 
         {/* İŞ BİRLİĞİ */}
-        <section style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 16 }}>
+        <section style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 32 }}>
           <SectionTitle>🤝 İŞ BİRLİĞİ</SectionTitle>
           <LinkCard href="https://basvuru.cancevizhurma.com/basvuru-form.html" highlight>
             <IconCircle>
@@ -284,24 +279,6 @@ export default function BioPage() {
             <LinkLabel highlight>İçerik Üretici Başvurusu</LinkLabel>
             <ArrowIcon />
           </LinkCard>
-        </section>
-
-        <Divider />
-
-        {/* KURUMSAL */}
-        <section style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 48 }}>
-          <SectionTitle>🏢 KURUMSAL</SectionTitle>
-          {KURUMSAL_LINKS.map(({ label, href }) => (
-            <LinkCard key={label} href={href}>
-              <IconCircle>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(245,189,106,0.8)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
-                </svg>
-              </IconCircle>
-              <LinkLabel>{label}</LinkLabel>
-              <ArrowIcon />
-            </LinkCard>
-          ))}
         </section>
 
         {/* Footer */}
