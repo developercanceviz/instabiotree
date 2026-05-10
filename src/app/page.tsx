@@ -6,32 +6,32 @@ import Image from 'next/image';
 
 const NAV_LINKS = [
   {
-    icon: '🔥',
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f0c040" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>,
     title: 'HAFTANIN KAMPANYASI',
     sub: 'Kaçırılmayacak Fırsatlar',
     href: 'https://cancevizhurma.com/cennet-hurmasi-kampanyasi-2li-paket',
     badge: 'İNDİRİMDE',
   },
   {
-    icon: '⭐',
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f0c040" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>,
     title: 'ÇOK SATANLAR',
     sub: 'En Çok Tercih Edilen Ürünler',
     href: 'https://cancevizhurma.com/acilisa-ozel',
   },
   {
-    icon: '📦',
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f0c040" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>,
     title: 'TÜM ÜRÜNLER',
     sub: 'Tüm Hurma Çeşitlerini Keşfet',
     href: 'https://cancevizhurma.com/',
   },
   {
-    icon: '📍',
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f0c040" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>,
     title: 'MAĞAZA / KONUM',
     sub: 'Mağazamıza Ulaşın',
     href: 'https://share.google/F5ezbaofD7Pm4tnOZ',
   },
   {
-    icon: '🤝',
+    icon: <svg width="28" height="28" viewBox="0 0 640 512" fill="#f0c040"><path d="M323.4 85.2l-96.8 78.4c-16.1 13-19.2 36.4-7 53.1c12.9 17.8 38 21.3 55.3 7.8l99.3-77.2c7-5.4 17-4.2 22.5 2.8s4.2 17-2.8 22.5l-20.9 16.2L512 316.8 512 128l-.7 0-3.9-2.5L434.8 79c-15.3-9.8-33.2-15-51.4-15c-21.8 0-43 7.5-60 21.2zm22.8 124.4l-51.7 40.2C263 274.4 217.3 268 193.7 235.6c-22.2-30.5-16.6-73.1 12.7-96.8l83.2-67.3c-11.6-4.9-24.1-7.4-36.8-7.4C234 64 215.7 69.6 200 80l-72 48 0 224 28.2 0 91.4 83.4c19.6 17.9 49.9 16.5 67.8-3.1c5.5-6.1 9.2-13.2 11.1-20.6l17 15.6c19.5 17.9 49.9 16.6 67.8-2.9c4.5-4.9 7.8-10.6 9.9-16.5c19.4 13 45.8 10.3 62.1-7.5c17.9-19.5 16.6-49.9-2.9-67.8l-134.2-123zM16 128c-8.8 0-16 7.2-16 16L0 352c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-224-80 0zM48 320a16 16 0 1 1 0 32 16 16 0 1 1 0-32zM544 128l0 224c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-208c0-8.8-7.2-16-16-16l-80 0zm32 208a16 16 0 1 1 32 0 16 16 0 1 1 -32 0z"/></svg>,
     title: 'TOPTAN SATIŞ',
     sub: 'Bayilik ve Toptan Sipariş',
     href: 'https://cancevizhurma.com/pages/iletisim',
@@ -191,40 +191,40 @@ export default function BioPage() {
           </header>
 
           {/* ────────────────── TRUST BAR ────────────────── */}
-          <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
+          <div style={{ display: 'flex', gap: 6, marginBottom: 20 }}>
             {[
-              { icon: '👥', value: '200.000+', label: 'Mutlu Müşteri' },
-              { icon: '🚚', value: '81 İLE',   label: 'Ücretsiz Kargo' },
-              { icon: '🛡️', value: 'KOŞULSUZ', label: 'İade Garantisi' },
+              { icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>, value: '200.000+', label: 'Mutlu Müşteri' },
+              { icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>, value: '81 İLE',   label: 'Ücretsiz Kargo' },
+              { icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>, value: 'KOŞULSUZ', label: 'İade Garantisi' },
             ].map(({ icon, value, label }) => (
               <div key={label} style={{
                 flex: 1,
-                background: 'rgba(255,255,255,0.035)',
-                border: '1px solid rgba(200,144,42,0.32)',
-                borderRadius: 12,
-                padding: '10px 6px 10px',
+                background: 'rgba(15, 6, 0, 0.5)',
+                border: '1px solid rgba(220, 160, 50, 0.4)',
+                borderRadius: 24,
+                padding: '8px 4px',
                 display: 'flex',
-                flexDirection: 'column',
                 alignItems: 'center',
-                gap: 3,
-                backdropFilter: 'blur(6px)',
+                justifyContent: 'center',
+                gap: 6,
+                backdropFilter: 'blur(8px)',
               }}>
-                <span style={{ fontSize: 22, lineHeight: 1 }}>{icon}</span>
-                <span style={{
-                  fontSize: 12.5,
-                  fontWeight: 800,
-                  color: '#f2cb55',
-                  letterSpacing: '0.01em',
-                  textAlign: 'center',
-                  lineHeight: 1.15,
-                }}>{value}</span>
-                <span style={{
-                  fontSize: 9.5,
-                  fontWeight: 600,
-                  color: 'rgba(255,255,255,0.55)',
-                  textAlign: 'center',
-                  letterSpacing: '0.03em',
-                }}>{label}</span>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{icon}</div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+                  <span style={{
+                    fontSize: 12,
+                    fontWeight: 800,
+                    color: '#f5c842',
+                    letterSpacing: '0.01em',
+                    lineHeight: 1,
+                  }}>{value}</span>
+                  <span style={{
+                    fontSize: 9,
+                    fontWeight: 500,
+                    color: 'rgba(255,255,255,0.85)',
+                    letterSpacing: '0.01em',
+                  }}>{label}</span>
+                </div>
               </div>
             ))}
           </div>
@@ -236,15 +236,15 @@ export default function BioPage() {
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: 10,
-              background: 'linear-gradient(90deg, #b86800 0%, #d98b10 20%, #f5c030 50%, #d98b10 80%, #b86800 100%)',
+              justifyContent: 'space-between',
+              background: 'linear-gradient(90deg, #b86800 0%, #f5c030 50%, #b86800 100%)',
               borderRadius: 50,
-              padding: '0 14px 0 8px',
-              height: 70,
+              padding: '6px 6px 6px 20px',
+              height: 76,
               textDecoration: 'none',
-              marginBottom: 20,
-              boxShadow: '0 6px 36px rgba(200,110,0,0.55), inset 0 1px 0 rgba(255,255,255,0.2)',
-              transition: 'filter 0.2s, box-shadow 0.2s',
+              marginBottom: 24,
+              boxShadow: '0 0 30px rgba(240, 165, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4)',
+              border: '1px solid rgba(255, 255, 255, 0.3)',
               position: 'relative',
               overflow: 'hidden',
             }}
@@ -253,59 +253,49 @@ export default function BioPage() {
             <div style={{
               position: 'absolute',
               inset: 0,
-              background: 'linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 55%)',
+              background: 'linear-gradient(180deg, rgba(255,255,255,0.2) 0%, transparent 50%)',
               borderRadius: 50,
               pointerEvents: 'none',
             }} />
 
-            {/* Cart icon bubble */}
-            <div style={{
-              width: 54,
-              height: 54,
-              borderRadius: '50%',
-              background: 'rgba(0,0,0,0.25)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              flexShrink: 0,
-            }}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-                <line x1="3" y1="6" x2="21" y2="6"/>
-                <path d="M16 10a4 4 0 01-8 0"/>
+            {/* Left: Cart Icon & Text */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))' }}>
+                <circle cx="9" cy="21" r="1.5" fill="#fff" stroke="none"></circle>
+                <circle cx="20" cy="21" r="1.5" fill="#fff" stroke="none"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
               </svg>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                <span style={{
+                  fontSize: 22,
+                  fontWeight: 900,
+                  color: '#ffffff',
+                  letterSpacing: '0.02em',
+                  lineHeight: 1.1,
+                  textShadow: '0 2px 4px rgba(0,0,0,0.3)',
+                }}>ALIŞVERİŞE BAŞLA</span>
+                <span style={{
+                  fontSize: 11,
+                  fontWeight: 600,
+                  color: '#ffffff',
+                  letterSpacing: '0.02em',
+                }}>En Taze &amp; En Lezzetli Hurma Çeşitleri</span>
+              </div>
             </div>
 
-            {/* Text */}
-            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 1 }}>
-              <span style={{
-                fontSize: 22,
-                fontWeight: 900,
-                color: '#1a0700',
-                letterSpacing: '0.04em',
-                lineHeight: 1.1,
-                textShadow: '0 1px 0 rgba(255,255,255,0.2)',
-              }}>ALIŞVERİŞE BAŞLA</span>
-              <span style={{
-                fontSize: 11,
-                fontWeight: 600,
-                color: 'rgba(26,7,0,0.70)',
-                letterSpacing: '0.03em',
-              }}>En Taze &amp; En Lezzetli Hurma Çeşitleri</span>
-            </div>
-
-            {/* Arrow bubble */}
+            {/* Right: Arrow circle */}
             <div style={{
-              width: 38,
-              height: 38,
+              width: 50,
+              height: 50,
               borderRadius: '50%',
-              background: 'rgba(255,255,255,0.25)',
+              background: '#ffffff',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               flexShrink: 0,
+              boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
             }}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a0700" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b86800" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="9 18 15 12 9 6"/>
               </svg>
             </div>
@@ -322,11 +312,12 @@ export default function BioPage() {
                   display: 'flex',
                   alignItems: 'center',
                   gap: 14,
-                  background: 'rgba(255,255,255,0.028)',
-                  border: '1px solid rgba(180,120,30,0.30)',
+                  background: 'rgba(15, 6, 0, 0.65)',
+                  border: '1px solid rgba(220,160,50,0.4)',
                   borderRadius: 14,
                   padding: '12px 14px',
                   textDecoration: 'none',
+                  backdropFilter: 'blur(10px)',
                   transition: 'background 0.2s, border-color 0.2s',
                 }}
               >
@@ -335,14 +326,12 @@ export default function BioPage() {
                   width: 46,
                   height: 46,
                   borderRadius: '50%',
-                  background: 'rgba(30,12,0,0.70)',
-                  border: '1.5px solid rgba(180,120,30,0.45)',
+                  background: 'transparent',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontSize: 22,
+                  fontSize: 24,
                   flexShrink: 0,
-                  boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.05)',
                 }}>
                   {icon}
                 </div>
@@ -350,18 +339,18 @@ export default function BioPage() {
                 {/* Text */}
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 2 }}>
                   <span style={{
-                    fontSize: 14,
+                    fontSize: 15,
                     fontWeight: 800,
-                    color: '#f0c040',
-                    letterSpacing: '0.06em',
+                    color: '#f5c842',
+                    letterSpacing: '0.04em',
                     lineHeight: 1.2,
                     fontFamily: 'Arial, sans-serif',
                   }}>{title}</span>
                   <span style={{
-                    fontSize: 12,
+                    fontSize: 13,
                     fontWeight: 400,
-                    color: 'rgba(255,255,255,0.52)',
-                    letterSpacing: '0.02em',
+                    color: 'rgba(255,255,255,0.85)',
+                    letterSpacing: '0.01em',
                   }}>{sub}</span>
                 </div>
 
@@ -381,7 +370,7 @@ export default function BioPage() {
                 )}
 
                 {/* Chevron */}
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(200,144,42,0.55)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f5c842" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
                   <polyline points="9 18 15 12 9 6"/>
                 </svg>
               </a>
@@ -401,11 +390,9 @@ export default function BioPage() {
           }}>
             {/* Left */}
             <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: 11 }}>
-              <span style={{
-                fontSize: 28,
-                lineHeight: 1,
-                filter: 'drop-shadow(0 0 6px rgba(200,144,42,0.5))',
-              }}>⏰</span>
+              <div style={{ filter: 'drop-shadow(0 0 6px rgba(200,144,42,0.5))' }}>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f0c040" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
                 <span style={{
                   fontSize: 11,
@@ -432,11 +419,9 @@ export default function BioPage() {
 
             {/* Right */}
             <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: 11 }}>
-              <span style={{
-                fontSize: 28,
-                lineHeight: 1,
-                filter: 'drop-shadow(0 0 6px rgba(200,144,42,0.5))',
-              }}>🎁</span>
+              <div style={{ filter: 'drop-shadow(0 0 6px rgba(200,144,42,0.5))' }}>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f0c040" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
+              </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
                 <span style={{
                   fontSize: 11,
