@@ -102,13 +102,11 @@ export default function BioPage() {
       <div style={{
         minHeight: '100dvh',
         width: '100%',
-        background: '#0a0400',
-        backgroundImage: `
-          radial-gradient(circle at 50% 15%, rgba(180, 110, 20, 0.25) 0%, transparent 40%),
-          radial-gradient(circle at 50% 40%, rgba(120, 50, 5, 0.15) 0%, transparent 60%),
-          radial-gradient(circle at 10% 10%, rgba(100, 40, 5, 0.1) 0%, transparent 30%),
-          radial-gradient(circle at 90% 10%, rgba(100, 40, 5, 0.1) 0%, transparent 30%)
-        `,
+        backgroundColor: '#0a0400',
+        backgroundImage: 'url("/background.png")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center top',
+        backgroundAttachment: 'fixed',
         display: 'flex',
         justifyContent: 'center',
         paddingBottom: 48,
