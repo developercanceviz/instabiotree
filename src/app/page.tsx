@@ -96,6 +96,7 @@ export default function BioPage() {
         .social-a:hover  { color: #f0c660 !important; }
         .social-a:hover .soc-ring { border-color: rgba(200,144,42,0.8) !important; background: rgba(200,144,42,0.12) !important; }
         .footer-a:hover  { color: #f0c660 !important; }
+        .promo-link:hover span { filter: brightness(1.3); }
       `}</style>
 
       {/* ── Page Shell ── */}
@@ -389,7 +390,7 @@ export default function BioPage() {
             gap: 0,
           }}>
             {/* Left */}
-            <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: 11 }}>
+            <a href="https://cancevizhurma.com/" className="promo-link" style={{ flex: 1, display: 'flex', alignItems: 'center', gap: 11, textDecoration: 'none', cursor: 'pointer' }}>
               <div style={{ filter: 'drop-shadow(0 0 6px rgba(200,144,42,0.5))' }}>
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f0c040" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
               </div>
@@ -400,13 +401,15 @@ export default function BioPage() {
                   color: '#f0c040',
                   letterSpacing: '0.06em',
                   lineHeight: 1.2,
+                  transition: 'color 0.2s',
                 }}>BUGÜNE ÖZEL FİYATLAR</span>
                 <span style={{
                   fontSize: 10,
                   color: 'rgba(255,255,255,0.48)',
+                  transition: 'color 0.2s',
                 }}>Stoklar tükenmeden al!</span>
               </div>
-            </div>
+            </a>
 
             {/* Divider */}
             <div style={{
@@ -418,7 +421,7 @@ export default function BioPage() {
             }} />
 
             {/* Right */}
-            <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: 11 }}>
+            <a href="https://cancevizhurma.com/" className="promo-link" style={{ flex: 1, display: 'flex', alignItems: 'center', gap: 11, textDecoration: 'none', cursor: 'pointer' }}>
               <div style={{ filter: 'drop-shadow(0 0 6px rgba(200,144,42,0.5))' }}>
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f0c040" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
               </div>
@@ -429,13 +432,15 @@ export default function BioPage() {
                   color: '#f0c040',
                   letterSpacing: '0.06em',
                   lineHeight: 1.2,
+                  transition: 'color 0.2s',
                 }}>HER SİPARİŞE ÖZEL</span>
                 <span style={{
                   fontSize: 10,
                   color: 'rgba(255,255,255,0.48)',
+                  transition: 'color 0.2s',
                 }}>Hediyeler &amp; sürpriz fırsatlar</span>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* ────────────────── SOCIAL LINKS ────────────────── */}
